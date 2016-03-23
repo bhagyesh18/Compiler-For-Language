@@ -1,0 +1,64 @@
+Enter File name : text
+Enter h % Divide Value : 10
+Your Input File ::
+--------------------------------------------------
+{ a ab ba abbab ab ba 
+ { ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
+ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+ ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
+ }
+ { a ab ba AB BA AB BA ab ba
+ { a ab AB }
+ a ab ba AB BA AABB
+ }
+ a ba cd dc
+ }
+
+---------------------------------------------------
+SYMBOL TABLE  [ BLOCK=1, ACTIVE=false ]
+ [0] :: 
+ [1] :: 
+ [2] :: 
+ [3] :: 
+ [4] :: 
+ [5] ::  [ab] -> [ba]
+ [6] :: 
+ [7] ::  [a]
+ [8] ::  [abbab]
+ [9] ::  [cd] -> [dc]
+---------------------------------------------------
+SYMBOL TABLE  [ BLOCK=2, ACTIVE=false ]
+ [0] ::  [ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ]
+ [1] :: 
+ [2] :: 
+ [3] :: 
+ [4] :: 
+ [5] ::  [AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]
+ [6] :: 
+ [7] :: 
+ [8] :: 
+ [9] :: 
+---------------------------------------------------
+SYMBOL TABLE  [ BLOCK=3, ACTIVE=false ]
+ [0] :: 
+ [1] ::  [AB] -> [BA]
+ [2] ::  [AABB]
+ [3] :: 
+ [4] :: 
+ [5] ::  [ab] -> [ba]
+ [6] :: 
+ [7] ::  [a]
+ [8] :: 
+ [9] :: 
+---------------------------------------------------
+SYMBOL TABLE  [ BLOCK=4, ACTIVE=false ]
+ [0] :: 
+ [1] ::  [AB]
+ [2] :: 
+ [3] :: 
+ [4] :: 
+ [5] ::  [ab]
+ [6] :: 
+ [7] ::  [a]
+ [8] :: 
+ [9] :: 

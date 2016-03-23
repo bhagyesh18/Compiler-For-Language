@@ -1,0 +1,112 @@
+How To Run : 
+
+Step 1: Go to the source Directory where you have saved the source program
+Step 2: Write command 
+	> Flex FP.l
+	It will generate c file named lex.yy.c
+Step 3: write command
+	
+       > gcc lex.yy.c -ll / gcc lex.yy.c -lfl
+        
+	it will produce a.out file.
+Step 4: Now Run the a.out file with argument of file name(Input file sample.fp)  using following command
+	
+        > ./a.out Sample.fp
+       
+
+Step 5: Enter the Hash table size .(An integer) say 10.
+==========================================================================
+
+Input File is Sample.fp File in the folder
+
+==========================================================================
+
+output :
+
+Tokens are displayed line by line along with its type and line number .
+
+Symbol table displayed at the end which displays Identifiers and its scope .
+
+
+
+Sample:
+
+
+
+Enter Hash Symbol Table Size :10
+              Token                Type   Line
+                  {    Curly Brace Open     1
+            Program             KeyWord     1
+            Sample1          Indetifier     1
+                  {    Curly Brace Open     2
+           Function             KeyWord     2
+              facto          Indetifier     2
+                VAL          Indetifier     2
+                  {    Curly Brace Open     3
+                 if             KeyWord     3
+                  {    Curly Brace Open     3
+                  <    Logical operator     3
+                VAL          Indetifier     3
+                  T             Boolean     3
+                  }   Curly Brace Close     3
+               then             KeyWord     4
+                  {    Curly Brace Open     4
+                  =          Arithmetic     4
+             retVal          Indetifier     4
+                 -1                 Int     4
+                  }   Curly Brace Close     4
+               else             KeyWord     5
+                  {    Curly Brace Open     5
+                  =          Arithmetic     5
+             retVal          Indetifier     5
+                  1                 Int     5
+                  }   Curly Brace Close     5
+                  {    Curly Brace Open     6
+              while             KeyWord     6
+                  {    Curly Brace Open     6
+                  >    Logical operator     6
+                VAL          Indetifier     6
+                  0                 Int     6
+                  }   Curly Brace Close     6
+                 do             KeyWord     6
+                  {    Curly Brace Open     7
+                  =          Arithmetic     7
+             retVal          Indetifier     7
+                  {    Curly Brace Open     7
+                  *          Arithmetic     7
+             retVal          Indetifier     7
+                VAL          Indetifier     7
+                  }   Curly Brace Close     7
+                  }   Curly Brace Close     7
+                  {    Curly Brace Open     8
+                  =          Arithmetic     8
+                VAL          Indetifier     8
+                  {    Curly Brace Open     8
+                  -          Arithmetic     8
+                VAL          Indetifier     8
+                  1                 Int     8
+                  }   Curly Brace Close     8
+                  }   Curly Brace Close     8
+                  }   Curly Brace Close     9
+         (bhagyesh)              String     9
+                  }   Curly Brace Close    10
+             return             KeyWord    11
+             retVal          Indetifier    11
+                  }   Curly Brace Close    12
+                  {    Curly Brace Open    13
+              print             KeyWord    13
+                  {    Curly Brace Open    13
+              facto          Indetifier    13
+                999                 Int    13
+                  }   Curly Brace Close    13
+                  }   Curly Brace Close    13
+                  }   Curly Brace Close    14
+
+
+------ SYMBOL TABLE -------- 
+              Symbol       Line  hash_Value      Scope
+              Sample1          1           2           1
+               facto          2           7           2
+                 VAL          2           7           2
+              retVal          4           9           5
+
